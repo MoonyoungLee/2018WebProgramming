@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>TODO in HTML5 Skeleton</title>
+<!-- CSS, JS External 정의 -->
+<link rel="stylesheet" type="text/css" href="TP1_SKELETON_CSS.css">
+</head>
+
+<body>
+	<article>
+		<header>
+			<!-- Header (Add ToDo 버튼, keyword 검색) -->
+			<a href="AddToDo.html"><button id="open-layer" onclick="">Add ToDo</button></a>
+			<select class="day">
+				<option value="Mon">Monday</option>
+				<option value="Tues">Tuesday</option>
+				<option value="Wed">Wednesday</option>
+				<option value="Thurs">Thursday</option>
+				<option value="Fri">Friday</option>
+			</select>
+			<input type="text" class="searchItem"  placeholder="Enter your keyword here">
+		</header>
+<!-- // 새로운 아이템을 추가하는 입력양식 //
+			<select class="day" id="myDay">
+				<option value="Mon">Monday</option>
+				<option value="Tues">Tuesday</option>
+				<option value="Wed">Wednesday</option>
+				<option value="Thurs">Thursday</option>
+				<option value="Fri">Friday</option>
+			</select>
+			<input type="text" class="title" id="myInput"/>
+			<textarea class="contents" id="myContents" cols="30" rows="10"></textarea>
+			<span onclick="newElement()" class="addBtn">Add</span>
+-->
+		<main>
+			<!-- Middle Bar A~D, Display Area A~D -->
+			<section id="middleBar_mon" class="middle">
+				<section class="middleTop"><strong>Monday</strong></section>
+				<section class="displayArea_mon"><b>월요일 목록</b></section>
+				<ul id="mon-div">
+
+				</ul>
+			</section>
+			<!--경계선-->
+			<div class="mainLine"></div>
+
+			<section id="middleBar_tue" class="middle">
+				<section class="middleTop"><strong>Tuesday</strong></section>
+				<section class="displayArea_tue"><b>화요일 목록</b></section>
+				<ul id="tue-div">
+
+				</ul>
+			</section>
+			<div class="mainLine"></div>
+
+			<section id="middleBar_wed" class="middle">
+				<section class="middleTop"><strong>Wednesday</strong></section>
+				<section class="displayArea_wed"><b>수요일 목록</b></section>
+				<ul id="wed-div">
+
+				</ul>
+			</section>
+			<div class="mainLine"></div>
+
+			<section id="middleBar_thu" class="middle">
+				<section class="middleTop"><strong>Thursday</strong></section>
+				<section class="displayArea_thu"><b>목요일 목록</b></section>
+				<ul id="thu-div">
+
+				</ul>
+			</section>
+			<div class="mainLine"></div>
+
+			<section id="middleBar_Fri" class="middle">
+				<section class="middleTop"><strong>Friday</strong></section>
+				<section class="displayArea_Fri"><b>금요일 목록</b></section>
+				<ul id="fri-div">
+
+				</ul>
+			</section>
+
+		</main>
+	</article>
+	<script>
+// item 추가를 위한 입력창 띄우기
+fuction inputElement() {
+	var open;
+	window.name =
+}
+// Create and add new item(새로운 아이템을 생성하고 추가)
+function newElement() {
+  var li = document.createElement("li");
+  var inputTitleValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputTitleValue);
+	var inputContentsValue = documet.getElementById("myContents").value;
+	var c = document.createTextNode(inputContentsValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+	}
+  document.getElementById("myInput").value = "";
+
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+// Delete item(아이템 삭제)
+
+// Change the title and contents of items(제목과 내용변경)
+
+// Move the item in the same day(같은 요일 안에서 이동)
+
+// Move to the item another day(다른 요일로 이동)
+
+// Search the whole items(아이템 전체 검색)
+
+// Search the items in a day(아이템 특정요일 검색)
+
+	</script>
+</body>
+
+</html>
